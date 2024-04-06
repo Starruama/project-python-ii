@@ -1,0 +1,49 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <h4>Lista de Treino</h4>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Peso</th>
+                <th>Repetição</th>
+                
+                <th>Data de Cadastro</th>
+                <th>Data de Atualização</th>
+                <th>Gerenciar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if lista %}
+                {% for produto in lista %}
+                    <tr>
+                        <td>{{ treino.nome }}</td>
+                        <td>{{ treino.descricao }}</td>
+                        <td>{{ treino.peso }}</td>
+                        <td>{{ treino.repeticao }}</td>                    
+                        <td>{{ treino.created_at }}</td>
+                        <td>{{ treino.updated_at }}</td>
+                        <td>
+                            <!-- <a href="{% url 'deletar_produto' produto.id %}">
+                                Excluir 
+                            </a>  -->                                
+                            
+                            <a href="{% url 'editar_treino' treino.id %}">
+                                Editar
+
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td class="text-center" colspan="6">
+                        Nenhum treino cadastrado
+                    </td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+{% endblock  %}

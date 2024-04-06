@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <h4>Cadastrando...</h4>
+
+    <form action="{% url 'cadastro_treino' %}" method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-3">
+                <label for="nome">Exercício</label>
+                <input type="text" name="nome" class="form-control">
+            </div>   
+            <div class="col-md-3">
+                <label for="repeticao">Repetições</label>
+                <input type="text" name="repeticao" class="form-control">
+            </div>         
+            <div class="col-md-3">
+                <label for="peso">Peso (KG)</label>
+                <input type="text" name="peso" class="form-control">
+            </div>
+        </div>
+        <div class="row">            
+            <div class="col-md-3">
+                <label for="descricao">Descrição</label>
+                <input type="text" name="descricao">
+            </div>
+        </div>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-success">Cadastrar</button>
+
+        </div>
+    </form>
+{% endblock  %}

@@ -1,3 +1,25 @@
+<link rel="stylesheet" href="styles.css">
+    <script>
+        // JavaScript para alternar entre os modos claro e escuro
+        function toggleDarkMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+    <style>
+        /* Estilos para o modo escuro */
+        body.dark-mode {
+            background-color: #1e1e1e; /* Cor de fundo no modo escuro */
+            color: white; /* Cor do texto no modo escuro */
+        }
+    </style>
+</head>
+    <!-- Botão para alternar entre os temas claro e escuro -->
+    <button onclick="toggleDarkMode()">Alternar Modo</button>
+</body>
+</html> 
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,13 +30,30 @@
     
 <body>
     <h1>Fit Force - Treine como um herói!</h1>
-    <h2>Dicas de treino</h2>
-
+ 
     <a href="{% url 'index' %}">Home</a>
-    <a href="{% url 'pagina_1' %}">Dicas de Treino</a>
-
+    <a href="{% url 'dicas_treino' %}">Dicas de Treino</a>
+    <a href="{% url 'cadastro_treino' %}">Cadastrar seu treino</a>
+    <a href="{% url 'editar_treino' %}">Editar seu treino</a>
+    
+ 
     {% block content %}
     {% endblock %}
    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Imagem</title>
+</head>
+<body>
+    <h1></h1>
+    <img src="https://i.pinimg.com/originals/e6/e2/b7/e6e2b76cbd445fbfed24d319a849af66.jpg" alt="Descrição da imagem">
 </body>
 </html>
