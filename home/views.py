@@ -4,3 +4,6 @@ from django.http import HttpResponse
 
 def index(request):
     return render(request, 'index.html')
+
+def pagina_1(request):
+    return render(request, 'pagina_1.html')
