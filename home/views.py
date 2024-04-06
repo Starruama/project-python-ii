@@ -24,7 +24,7 @@ def criarTreino(request):
     treino.save()
     return redirect ('index')
 
-def editar(request, id_treino):
+def editar_treino(request, id_treino):
     treino = get_object_or_404(Treino, pk=id_treino)
     return render(request, 'editar_treino.html', {'dados_treino': treino})
  
