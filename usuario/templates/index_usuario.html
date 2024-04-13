@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Force</title>
+    <!-- FORM LOGIN -->
+    <form action="{% url 'login_usuario' %}" method="post">
+        {% csrf_token %}
+        <label for="email">Email</label>
+        <input type="text" id="email" class="form-control" name="email" placeholder="E-mail">
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" class="form-control" name="senha" placeholder="Senha">
+
+        /<button class="btn btn-primary">Logar</button>        
+    </form>
+    <!-- FORM CADASTRO LOGIN -->
+    <form action="{% url 'criar_usuario' %}" method="post">
+        {% csrf_token %}
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" class="form-control" name="nome" placeholder="Nome">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" class="form-control" name="email" placeholder="E-mail">
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" class="form-control" name="senha" placeholder="Senha">
+
+        <button class="btn btn-success">Criar conta</button>
+    
+    </form>
+</head>
+<body>
+    <h1>Autenticação</h1>
+</body>
+</html>

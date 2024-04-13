@@ -1,33 +1,15 @@
-<link rel="stylesheet" href="styles.css">
-    <script>
-        // JavaScript para alternar entre os modos claro e escuro
-        function toggleDarkMode() {
-            var element = document.body;
-            element.classList.toggle("dark-mode");
-        }
-    </script>
-    <style>
-        /* Estilos para o modo escuro */
-        body.dark-mode {
-            background-color: #1e1e1e; /* Cor de fundo no modo escuro */
-            color: white; /* Cor do texto no modo escuro */
-        }
-    </style>
-</head>
-    <!-- Botão para alternar entre os temas claro e escuro -->
-    <button onclick="toggleDarkMode()">Alternar Modo</button>
-</body>
-</html> 
-
+{% extends "master.html" %}
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fit Fhvjhvjhvjhvhorce</title>
+    <title>Fit Force</title>
 
-    
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
 <body>
     <h1>Fit Force - Treine como um herói!</h1>
  

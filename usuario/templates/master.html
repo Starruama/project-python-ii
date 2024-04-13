@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tito's Stock</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="{% url 'index' %}">Home</a>
+                      
+                    </a>
+                    <ul>
+                       
+                        
+                        
+                        <li><a href="{% url 'dicas_treino' %}">Dicas de Treino</a>
+                            
+                            
+                        <li><a href="{% url 'cadastro_treino' %}">Cadastrar seu treino</a>
+                    </ul>
+                </li>
+                <li>
+
+                    <a href="#">
+                       
+                    </a>
+
+                    <ul>
+                       
+                    </ul>
+
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container-fluid mt-2">
+        <div clas ="alert alert-secondary">
+            <h5>Olá, {{ user.username }} !</h5>
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+</body>
+</html>
